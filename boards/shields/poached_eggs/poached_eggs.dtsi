@@ -1,8 +1,10 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "./poached_eggs-layouts.dtsi"
 
 / {
     chosen {
         zmk,kscan = &kscan0;
+        zmk,physical-layout = &poached_eggs_physical_layout;
         zmk,matrix-transform = &default_transform;
     };
 
@@ -38,3 +40,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6) RC(3,7) RC(3,8) RC(3,9) 
             ;
     };
 };
+
+&xiao_spi { status = "disabled"; };
+&xiao_i2c { status = "disabled"; };
+&xiao_serial { status = "disabled"; };
