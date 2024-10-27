@@ -3,7 +3,7 @@
 / {
     poached_eggs_physical_layout: poached_eggs_physical_layout {
         compatible = "zmk,physical-layout";
-        display-name = "Default";
+        display-name = "Poached Eggs";
 
         kscan = <&kscan0>;
         transform = <&matrix_transform>;
