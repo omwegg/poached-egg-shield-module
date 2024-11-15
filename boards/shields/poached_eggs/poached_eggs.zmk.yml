@@ -6,6 +6,7 @@ url: https://example.com/
 requires: [seeed_xiao]
 features:
   - keys
+  - studio
 siblings:
   - poached_eggs_left
   - poached_eggs_right
