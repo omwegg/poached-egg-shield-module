@@ -11,7 +11,7 @@
                 &kp V       &kp R       &kp N       &kp J       &kp F       &kp B                          &kp E       &kp I        &kp M       &kp Q       &kp U        &kp Y
                 &kp W       &kp S       &kp O       &kp K       &kp G       &kp C                          &kp D       &kp H        &kp L       &kp P       &kp T        &kp X
                 &kp X       &kp T       &kp P       &kp L       &kp H       &kp D                          &kp C       &kp G        &kp K       &kp O       &kp S        &kp W
-                &kp Y       &kp U       &kp Q       &kp M       &kp I       &mo E       &kp A    &kp A     &mo B       &kp F        &kp J       &kp N       &kp R        &kp V
+                &kp Y       &kp U       &kp Q       &kp M       &kp I       &kp E       &kp A    &kp A     &kp B       &kp F        &kp J       &kp N       &kp R        &kp V
             >;
         };
 
