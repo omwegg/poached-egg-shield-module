@@ -2,7 +2,7 @@ file_format: "1"
 id: poached_eggs
 name: Poached Eggs
 type: shield
-url: https://example.com/
+url: https://github.com/walk-ingegg/poached-egg-shield-module
 requires: [seeed_xiao]
 features:
   - keys
