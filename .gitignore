@@ -22,3 +22,6 @@ Desktop.ini
 *.uf2
 *.hex
 *.bin
+
+# 個人用ローカルメモ（remote には上げない）
+*.local.md
