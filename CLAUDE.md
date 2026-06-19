@@ -128,3 +128,4 @@
 ## 既知の TODO / 留意点
 
 - `config/poached_eggs.keymap` の `bt_layer` 最下段にある `O M U ... K E N`（"omuken"）の綴りは、**意図的なサインとして残すことが確定済み**。テスト残骸と誤認して削除しないこと。
+- `.github/workflows/draw-keymap.yml` が [keymap-drawer](https://github.com/caksoylar/keymap-drawer) でキーマップ図を生成し、`keymap-drawer/` に SVG を**自動コミット**する（push 時に bot コミットが入る点に注意）。カスタム分割のため、初回はレイアウトの調整が必要な場合がある。設定は `keymap_drawer.config.yaml`。

@@ -82,13 +82,21 @@ XIAO BLE への書き込みは UF2 ブートローダ経由で行います。
 | 2 | raise | 右親指 `&mo 2` を長押し | ファンクション・矢印・括弧 |
 | 3 | bt | lower + raise を同時に長押し（各レイヤーの `&mo 3`） | Bluetooth 選択/クリア・Studio ロック解除 |
 
+### キーマップ図（自動生成）
+
+下図は [keymap-drawer](https://github.com/caksoylar/keymap-drawer) により GitHub Actions（[draw-keymap.yml](.github/workflows/draw-keymap.yml)）で自動生成されます。`config/poached_eggs.keymap` を変更して push すると更新されます（**初回 push 後に生成・コミット**）。
+
+![Poached Eggs keymap](keymap-drawer/poached_eggs.svg)
+
+> 以下の ASCII 図は暫定です。SVG が正しく描画されることを確認できたら削除して構いません（カスタム分割のため、初回はレイアウトの微調整が必要な場合があります）。
+
 ### default レイヤー
 
 ```
  TAB   Q   W   E   R   T  │  Y   U   I   O   P   -
 CTRL   A   S   D   F   G  │  H   J   K   L   ;   '
 SHFT   Z   X   C   V   B  │  N   M   ,   .   /  SHFT
-            GUI ALT L1 SPC │ RET L2 BSPC GUI
+CAPS        GUI ALT L1 SPC │ RET L2 BSPC GUI
 ```
 
 ### lower レイヤー（数字・記号）

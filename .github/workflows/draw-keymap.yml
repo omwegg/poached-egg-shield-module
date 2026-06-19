@@ -1,0 +1,22 @@
+name: Draw ZMK keymap
+
+# keymap-drawer でキーマップ図(SVG)を自動生成し、リポジトリにコミットする。
+# 公式 reusable workflow を利用: https://github.com/caksoylar/keymap-drawer
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "config/poached_eggs.keymap"
+      - "config/boards/shields/poached_eggs/poached_eggs.dtsi"
+      - "keymap_drawer.config.yaml"
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      keymap_patterns: "config/poached_eggs.keymap"
+      config_path: "keymap_drawer.config.yaml"
+      output_folder: "keymap-drawer"
+      commit_message: "docs: キーマップ図を自動更新 (keymap-drawer)"

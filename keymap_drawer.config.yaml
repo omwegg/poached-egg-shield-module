@@ -1,0 +1,13 @@
+# keymap-drawer 設定ファイル
+# 仕様: https://github.com/caksoylar/keymap-drawer#configuration
+#
+# 注意: Poached Eggs はカスタム分割シールドのため、keymap-drawer の自動レイアウト推定が
+#       完全でない場合があります。初回の SVG 生成結果を見て、必要なら parse_config /
+#       draw_config（または ortho 指定）でレイアウトを調整してください。
+
+draw_config:
+  # キーの見た目（必要に応じて調整）
+  key_h: 60
+  key_w: 60
+  # 修飾キー等の表示を見やすく
+  append_colon_to_layer_header: false
