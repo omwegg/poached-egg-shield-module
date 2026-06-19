@@ -11,7 +11,7 @@
 - MCU: Seeeduino XIAO BLE (`seeeduino_xiao_ble`)
 - 左右分割（左=セントラル / 右=ペリフェラル）
 - マトリクス: 4 行 × 14 列、`col2row`
-- ZMK 本体は **v0.2.1 に固定**
+- ZMK 本体は **v0.3.0 に固定**
 
 ## ファイルの役割と編集時の勘所
 
@@ -27,7 +27,7 @@
 
 ## 重要な不変条件（壊しやすい箇所）
 
-1. **ZMK バージョンの同期** — `config/west.yml` の `revision` と `.github/workflows/build.yml` の `@v0.2.1` は**同じバージョン**を指す必要があります。上げ下げするときは両方を必ず合わせてください。
+1. **ZMK バージョンの同期** — `config/west.yml` の `revision` と `.github/workflows/build.yml` の `@v0.3.0` は**同じバージョン**を指す必要があります。上げ下げするときは両方を必ず合わせてください。
 2. **キー数の一致** — `poached_eggs.keymap` の各レイヤーは合計 50 キー（左右で 6+6+6+7）。`dtsi` の物理レイアウト・`map`・`json` とズレないこと。
 3. **左右の非対称設定** — セントラルは左、Studio snippet も左のみ、右は `col-offset=7`。左右を編集するときは対称性の前提を疑うこと。
 4. **物理レイアウト変更は 3 ファイル連動** — `poached_eggs.dtsi`（`keys` と `default_transform`）、`poached_eggs.json`、必要なら `build.yaml`。
@@ -79,7 +79,7 @@
 
 - ZMK / Zephyr / ハードウェアの仕様は、**まず公式の一次情報を参照**する（[ZMK Docs](https://zmk.dev/docs)、[Zephyr Docs](https://docs.zephyrproject.org/)、`zmkfirmware/zmk` リポジトリ、Seeed の XIAO BLE 公式 Wiki など）。
 - ブログや掲示板などの二次情報を当たるときも、**公式の記述やソースコードと突き合わせて裏取りし、確からしさを担保**してから採用する。裏が取れない情報は「未確認」と明示する。
-- バージョン依存の挙動は、**固定中の ZMK バージョン（現在 v0.2.1）に対応するドキュメント/ソース**を見る（最新版の記述と混同しない）。
+- バージョン依存の挙動は、**固定中の ZMK バージョン（現在 v0.3.0）に対応するドキュメント/ソース**を見る（最新版の記述と混同しない）。
 
 ## 品質担保
 

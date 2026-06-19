@@ -8,7 +8,7 @@
 
 ## 特徴
 
-- **ZMK ファームウェア**（`v0.2.1` に固定）
+- **ZMK ファームウェア**（`v0.3.0` に固定）
 - **左右分割**構成（左=セントラル / 右=ペリフェラル、Bluetooth 接続）
 - **ZMK Studio 対応** — PC やブラウザからキーマップをリアルタイム編集可能（ロック機能付き）
 - **4 レイヤー** — QWERTY / 数字・記号 / ファンクション・矢印 / Bluetooth 設定
@@ -31,7 +31,7 @@
 ├── build.yaml                 # GitHub Actions のビルドマトリクス（左右の .uf2 を生成）
 ├── zephyr/module.yml          # ZMK 外部モジュールとしての定義（board_root: .）
 ├── config/
-│   ├── west.yml               # 取得する ZMK 本体のバージョン (v0.2.1)
+│   ├── west.yml               # 取得する ZMK 本体のバージョン (v0.3.0)
 │   ├── poached_eggs.keymap    # キーマップ（全レイヤー）
 │   ├── poached_eggs.json      # ZMK Studio / keymap-editor 用の物理レイアウト
 │   └── boards/shields/poached_eggs/
