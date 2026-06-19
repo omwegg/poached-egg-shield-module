@@ -1,7 +1,56 @@
 layout: {zmk_keyboard: poached_eggs}
 layers:
-  Base: [TAB, Q, W, E, R, T, Y, U, I, O, P, '-', LCTRL, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z, X, C, V, B, N, M, ',', ., /, RSHFT, '&caps_word', '', '', LGUI,
-    LALT, Lower, SPACE, RET, Raise, BSPC, RGUI, '', '', '']
+  Base:
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '-'
+  - LCTRL
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - LSHFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - RSHFT
+  - '&caps_word'
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - LGUI
+  - LALT
+  - Lower
+  - SPACE
+  - RET
+  - Raise
+  - BSPC
+  - RGUI
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
   Lower:
   - ESC
   - '1'
@@ -28,20 +77,20 @@ layers:
   - )
   - '~'
   - RET
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
   - '{'
   - '}'
   - '|'
-  - ''
-  - ''
-  - ''
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -50,9 +99,9 @@ layers:
   - BT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
   Raise:
   - F1
   - F2
@@ -66,33 +115,33 @@ layers:
   - F10
   - F11
   - F12
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
   - LEFT
   - DOWN
   - UP
   - RIGHT
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
   - +
   - '-'
   - '='
   - '['
   - ']'
   - \
-  - ''
-  - ''
-  - ''
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BT
@@ -101,9 +150,9 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
   BT:
   - BT CLR
   - {t: BT, h: '0'}
@@ -111,47 +160,47 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
   - '&studio_unlock'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
   - O
   - M
   - U
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: held}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
+  - {t: ∅, type: held}
+  - {t: ∅, type: none}
+  - {t: ∅, type: none}
   - K
   - E
   - N
