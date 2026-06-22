@@ -85,46 +85,11 @@ XIAO BLE への書き込みは UF2 ブートローダ経由で行います。
 
 ### キーマップ図（自動生成）
 
-下図は [keymap-drawer](https://github.com/caksoylar/keymap-drawer) により GitHub Actions（[draw-keymap.yml](.github/workflows/draw-keymap.yml)）で自動生成されます。`config/poached_eggs.keymap` を変更して push すると更新されます（**初回 push 後に生成・コミット**）。
+下図は [keymap-drawer](https://github.com/caksoylar/keymap-drawer) により GitHub Actions（[draw-keymap.yml](.github/workflows/draw-keymap.yml)）で自動生成されます。`config/poached_eggs.keymap` を変更して push すると更新されます。未割り当て(none)は ∅（グレー）、透過(trans)は ▽（青）で色分けしています。
 
 ![Poached Eggs keymap](keymap-drawer/poached_eggs.svg)
 
-> 以下の ASCII 図は暫定です。SVG が正しく描画されることを確認できたら削除して構いません（カスタム分割のため、初回はレイアウトの微調整が必要な場合があります）。
-
-### default レイヤー
-
-```
- TAB   Q   W   E   R   T  │  Y   U   I   O   P   -
-CTRL   A   S   D   F   G  │  H   J   K   L   ;   '
-SHFT   Z   X   C   V   B  │  N   M   ,   .   /  SHFT
-CAPS        GUI ALT L1 SPC │ RET L2 BSPC GUI       NUM(tog)
-```
-
-### lower レイヤー（数字・記号）
-
-```
- ESC   1   2   3   4   5  │  6   7   8   9   0   `
-   `   !   @   #   $   %  │  ^   &   *   (   )   ~
- RET   ·   ·   ·   ·   ·  │  ·   ·   ·   {   }   |
-                  DEL L3
-```
-
-### raise レイヤー（ファンクション・矢印）
-
-```
-  F1  F2  F3  F4  F5  F6  │  F7  F8  F9 F10 F11 F12
-   ·   ·   ·   ·   ·   ·  │  ·   ←   ↓   ↑   →   ·
-   ·   ·   ·   ·   ·   ·  │  +   -   =   [   ]   \
-              L3      DEL
-```
-
-### bt レイヤー（Bluetooth）
-
-```
-BT_CLR  BT0 BT1 BT2 BT3 BT4 │  ·   ·   ·   ·   ·   ·
-STUDIO   ·   ·   ·   ·   ·  │  ·   ·   ·   ·   ·   ·
-   ·     ·   ·   ·   ·   ·  │  ·   ·   ·   ·   ·   ·
-```
+bt レイヤーの主なキー:
 
 - `BT_CLR` … 現在のプロファイルのペアリング情報を消去
 - `BT0`〜`BT4` … Bluetooth プロファイルの切り替え
