@@ -73,7 +73,7 @@ XIAO BLE への書き込みは UF2 ブートローダ経由で行います。
 
 ## キーマップ
 
-`config/poached_eggs.keymap` で定義しています。レイヤーは 4 つです。
+`config/poached_eggs.keymap` で定義しています。レイヤーは 5 つです。
 
 | # | レイヤー | アクセス方法 | 用途 |
 |---|----------|--------------|------|
@@ -81,6 +81,7 @@ XIAO BLE への書き込みは UF2 ブートローダ経由で行います。
 | 1 | lower | 左親指 `&mo 1` を長押し | 数字・記号 |
 | 2 | raise | 右親指 `&mo 2` を長押し | ファンクション・矢印・括弧 |
 | 3 | bt | lower + raise を同時に長押し（各レイヤーの `&mo 3`） | Bluetooth 選択/クリア・Studio ロック解除 |
+| 4 | num | default 右下角の `&tog 4` でトグル | テンキー（右手） |
 
 ### キーマップ図（自動生成）
 
@@ -96,7 +97,7 @@ XIAO BLE への書き込みは UF2 ブートローダ経由で行います。
  TAB   Q   W   E   R   T  │  Y   U   I   O   P   -
 CTRL   A   S   D   F   G  │  H   J   K   L   ;   '
 SHFT   Z   X   C   V   B  │  N   M   ,   .   /  SHFT
-CAPS        GUI ALT L1 SPC │ RET L2 BSPC GUI
+CAPS        GUI ALT L1 SPC │ RET L2 BSPC GUI       NUM(tog)
 ```
 
 ### lower レイヤー（数字・記号）
