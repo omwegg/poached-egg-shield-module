@@ -1,0 +1,25 @@
+# keymap-drawer 設定ファイル
+# 仕様: https://github.com/caksoylar/keymap-drawer#configuration
+#
+# Poached Eggs はカスタム分割シールドだが、keymap-drawer が物理レイアウトを
+# 自動認識（zmk_keyboard: poached_eggs）するため、レイアウトはそのまま描画される。
+
+parse_config:
+  # &none を空欄ではなく「∅」記号＋専用クラス(none)で表示し、CSS で色分けする
+  raw_binding_map:
+    "&none": { t: "∅", type: "none" }
+  # &trans は既定で ▽ + type:trans。色は下の svg_extra_style で調整する。
+  trans_legend: { t: "▽", type: "trans" }
+
+draw_config:
+  key_h: 60
+  key_w: 60
+  append_colon_to_layer_header: false
+  # 既定CSSに追記して none / trans を視認しやすく色分けする
+  svg_extra_style: |
+    /* none: 未割り当てキー。グレーで控えめに */
+    rect.none { fill: #ededed; stroke: #d5d5d5; }
+    text.none { fill: #9aa0a6; }
+    /* trans: 透過（下のレイヤーに委譲）。青系で区別 */
+    rect.trans { fill: #eaf2ff; }
+    text.trans { fill: #3f72c4; opacity: 0.95; }

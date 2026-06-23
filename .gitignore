@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# エディタ / IDE
+.vscode/
+.idea/
+*.swp
+
+# West / Zephyr のローカルビルド成果物
+# (通常 CI でビルドするため、手元でビルドした場合のみ生成される)
+/build/
+/.west/
+*.uf2
+*.hex
+*.bin
+
+# 個人用ローカルメモ（remote には上げない）
+*.local.md
+_temp/*
+
+# AI エージェント向けのローカル専用（remote には上げない）
+CLAUDE.md
+.claude/
