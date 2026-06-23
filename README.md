@@ -12,40 +12,6 @@
 - **左右分割**構成（左=セントラル / 右=ペリフェラル、Bluetooth 接続）
 - **ZMK Studio 対応** — PC やブラウザからキーマップをリアルタイム編集可能（ロック機能付き）
 - **4 レイヤー** — QWERTY / 数字・記号 / ファンクション・矢印 / Bluetooth 設定
-- スリープ対応で省電力
-
-## ハードウェア構成
-
-| 項目 | 内容 |
-|------|------|
-| MCU | [Seeeduino XIAO BLE](https://wiki.seeedstudio.com/XIAO_BLE/)（`seeeduino_xiao_ble`） |
-| マトリクス | 4 行 × 14 列、`col2row` ダイオード方向 |
-| 物理レイアウト | 上 3 段は左右 6 列ずつ + 親指キー（計 50 キー） |
-| 行 GPIO | `xiao_d` 10, 9, 8, 7 |
-| 列 GPIO | `xiao_d` 0〜6（右手は列オフセット +7） |
-
-## リポジトリ構成
-
-```
-.
-├── build.yaml                 # GitHub Actions のビルドマトリクス（左右の .uf2 を生成）
-├── zephyr/module.yml          # ZMK 外部モジュールとしての定義（board_root: .）
-├── config/
-│   ├── west.yml               # 取得する ZMK 本体のバージョン (v0.3.0)
-│   ├── poached_eggs.keymap    # キーマップ（全レイヤー）
-│   ├── poached_eggs.json      # ZMK Studio / keymap-editor 用の物理レイアウト
-│   └── boards/shields/poached_eggs/
-│       ├── poached_eggs.dtsi             # 物理レイアウト・マトリクス変換・kscan 定義
-│       ├── poached_eggs_left.overlay     # 左手の列 GPIO
-│       ├── poached_eggs_right.overlay    # 右手の列 GPIO + col-offset
-│       ├── poached_eggs.conf             # 左右共通の設定 (CONFIG_*)
-│       ├── poached_eggs_left.conf        # 左手固有の設定（Studio 有効化など）
-│       ├── poached_eggs_right.conf       # 右手固有の設定
-│       ├── Kconfig.shield                # シールド名の定義
-│       ├── Kconfig.defconfig             # 分割・セントラル役割などのデフォルト
-│       └── poached_eggs.zmk.yml          # シールドのメタデータ（Studio 用）
-└── .github/workflows/build.yml           # ビルドワークフロー
-```
 
 ## ビルド方法
 
@@ -75,13 +41,13 @@ XIAO BLE への書き込みは UF2 ブートローダ経由で行います。
 
 `config/poached_eggs.keymap` で定義しています。レイヤーは 5 つです。
 
-| # | レイヤー | アクセス方法 | 用途 |
-|---|----------|--------------|------|
-| 0 | default | （ベース） | QWERTY 配列 |
-| 1 | lower | 左親指 `&mo 1` を長押し | 数字・記号 |
-| 2 | raise | 右親指 `&mo 2` を長押し | ファンクション・矢印・括弧 |
-| 3 | bt | lower + raise を同時に長押し（各レイヤーの `&mo 3`） | Bluetooth 選択/クリア・Studio ロック解除 |
-| 4 | num | default 右下角の `&tog 4` でトグル | テンキー（右手） |
+| #   | レイヤー | アクセス方法                                         | 用途                                     |
+| --- | -------- | ---------------------------------------------------- | ---------------------------------------- |
+| 0   | default  | （ベース）                                           | QWERTY 配列                              |
+| 1   | lower    | 左親指 `&mo 1` を長押し                              | 数字・記号                               |
+| 2   | raise    | 右親指 `&mo 2` を長押し                              | ファンクション・矢印・括弧               |
+| 3   | bt       | lower + raise を同時に長押し（各レイヤーの `&mo 3`） | Bluetooth 選択/クリア・Studio ロック解除 |
+| 4   | num      | default 右下角の `&tog 4` でトグル                   | テンキー（右手）                         |
 
 ### キーマップ図（自動生成）
 
