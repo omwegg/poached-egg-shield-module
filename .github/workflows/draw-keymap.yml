@@ -8,7 +8,7 @@ on:
     paths:
       - "config/poached_eggs.keymap"
       - "config/boards/shields/poached_eggs/poached_eggs.dtsi"
-      - "keymap_drawer.config.yaml"
+      - "keymap-drawer/keymap_drawer.config.yaml"
 
 jobs:
   draw:
@@ -17,6 +17,6 @@ jobs:
       contents: write
     with:
       keymap_patterns: "config/poached_eggs.keymap"
-      config_path: "keymap_drawer.config.yaml"
+      config_path: "keymap-drawer/keymap_drawer.config.yaml"
       output_folder: "keymap-drawer"
       commit_message: "docs: キーマップ図を自動更新 (keymap-drawer)"
