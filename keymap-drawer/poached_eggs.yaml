@@ -248,10 +248,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - RET
+  - {t: ∅, type: none}
+  - BSPC
   - KP 0
-  - KP ENTER
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '00'
+  - ','
   - {t: ▽, type: trans}

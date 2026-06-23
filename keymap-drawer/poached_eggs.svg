@@ -1172,33 +1172,31 @@ text.trans { fill: #3f72c4; opacity: 0.95; }
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(450, 210)" class="key trans keypos-43">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(450, 210)" class="key keypos-43">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">RET</text>
 </g>
-<g transform="translate(510, 210)" class="key keypos-44">
+<g transform="translate(510, 210)" class="key none keypos-44">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key none"/>
+<text x="0" y="0" class="key none tap">∅</text>
+</g>
+<g transform="translate(570, 210)" class="key keypos-45">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">BSPC</text>
+</g>
+<g transform="translate(630, 210)" class="key keypos-46">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-0.6em">KP</tspan><tspan x="0" dy="1.2em">0</tspan>
 </text>
 </g>
-<g transform="translate(570, 210)" class="key keypos-45">
+<g transform="translate(690, 210)" class="key keypos-47">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">KP</tspan><tspan x="0" dy="1.2em">ENTER</tspan>
-</text>
+<text x="0" y="0" class="key tap">00</text>
 </g>
-<g transform="translate(630, 210)" class="key trans keypos-46">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
-</g>
-<g transform="translate(690, 210)" class="key trans keypos-47">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
-</g>
-<g transform="translate(750, 210)" class="key trans keypos-48">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(750, 210)" class="key keypos-48">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">,</text>
 </g>
 <g transform="translate(810, 210)" class="key trans keypos-49">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>

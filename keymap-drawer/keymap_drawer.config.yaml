@@ -8,6 +8,7 @@ parse_config:
   # &none を空欄ではなく「∅」記号＋専用クラス(none)で表示し、CSS で色分けする
   raw_binding_map:
     "&none": { t: "∅", type: "none" }
+    "&num_00": "00"
   # &trans は既定で ▽ + type:trans。色は下の svg_extra_style で調整する。
   trans_legend: { t: "▽", type: "trans" }
 

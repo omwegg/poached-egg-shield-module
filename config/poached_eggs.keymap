@@ -3,6 +3,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        // "00"（KP_N0 を 2 回送る）numpad 用マクロ
+        num_00: num_00 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N0 &kp KP_N0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -52,7 +61,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                       &kp KP_DIVIDE    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                       &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                       &kp KP_EQUAL     &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_N0  &kp KP_ENTER  &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RET  &none  &kp BSPC  &kp KP_N0  &num_00  &kp COMMA  &trans
             >;
         };
     };
