@@ -25,3 +25,7 @@ Desktop.ini
 
 # 個人用ローカルメモ（remote には上げない）
 *.local.md
+
+# AI エージェント向けのローカル専用（remote には上げない）
+CLAUDE.md
+.claude/
