@@ -38,8 +38,8 @@ layers:
   - /
   - RSHFT
   - '&caps_word'
-  - {t: ∅, type: none}
-  - {t: ∅, type: none}
+  - {t: ←, h: Desk}
+  - {t: →, h: Desk}
   - LGUI
   - LALT
   - Lower
@@ -155,8 +155,8 @@ layers:
   - {t: ∅, type: none}
   BT:
   - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
+  - {t: BT0, h: Mac}
+  - {t: BT1, h: Win}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
@@ -167,8 +167,8 @@ layers:
   - {t: ∅, type: none}
   - {t: ∅, type: none}
   - '&studio_unlock'
-  - {t: ∅, type: none}
-  - {t: ∅, type: none}
+  - {t: Win, h: OS}
+  - {t: Mac, h: OS}
   - {t: ∅, type: none}
   - {t: ∅, type: none}
   - {t: ∅, type: none}
@@ -255,3 +255,61 @@ layers:
   - '00'
   - ','
   - {t: ▽, type: trans}
+  Mac:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ←, h: Desk}
+  - {t: →, h: Desk}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [37, 38]
+  k: TaskView
+  l: [Base, Num]
+- p: [37, 38]
+  k: Mission
+  l: [Mac]
