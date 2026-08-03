@@ -9,6 +9,19 @@ parse_config:
   raw_binding_map:
     "&none": { t: "∅", type: "none" }
     "&num_00": "00"
+    # BT プロファイル + OS モード連動マクロ
+    "&prof0_mac": { t: "BT0", h: "Mac" }
+    "&prof1_win": { t: "BT1", h: "Win" }
+    "&to 0": { t: "Win", h: "OS" }
+    "&to 5": { t: "Mac", h: "OS" }
+    # 仮想デスクトップ切替（base = Windows / mac レイヤー = macOS）
+    "&kp LC(LG(LEFT))": { t: "←", h: "Desk" }
+    "&kp LC(LG(RIGHT))": { t: "→", h: "Desk" }
+    "&kp LC(LEFT)": { t: "←", h: "Desk" }
+    "&kp LC(RIGHT)": { t: "→", h: "Desk" }
+    # combo（左下ペア同時押し）
+    "&kp LG(TAB)": "TaskView"
+    "&kp LC(UP)": "Mission"
   # &trans は既定で ▽ + type:trans。色は下の svg_extra_style で調整する。
   trans_legend: { t: "▽", type: "trans" }
 
