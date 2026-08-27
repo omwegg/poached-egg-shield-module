@@ -23,6 +23,73 @@
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1 &to 0>;
         };
+
+        // 仮想デスクトップ切替。&kp LC(LG(X)) 形式の implicit modifier は ZMK 内で
+        // グローバルに 1 つの状態として持たれ、zmk_hid_implicit_modifiers_release()
+        // が「どのキーが立てたか」を区別せず一括クリアする（hid_listener.c 参照）。
+        // そのため他キーと重なると Ctrl だけ抜けた report が出て Win+←/→
+        // （Aero Snap = ウィンドウが左右に寄る）になることがある。
+        // macro で修飾キーを explicit modifier として押すと、このキーの押下に
+        // 紐付いて refcount 管理されるため他キーの離しで落ちない。
+        // pause_for_release で押しっぱなし中は保持し、長押しリピートも維持する。
+        // 離す順は キー → 修飾キー（修飾が先に抜けた瞬間の誤爆を防ぐ）。
+        win_desk_prev: win_desk_prev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LGUI &kp LEFT>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp LEFT &kp LGUI &kp LCTRL>;
+        };
+        win_desk_next: win_desk_next {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LGUI &kp RIGHT>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp RIGHT &kp LGUI &kp LCTRL>;
+        };
+        mac_desk_prev: mac_desk_prev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LEFT>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp LEFT &kp LCTRL>;
+        };
+        mac_desk_next: mac_desk_next {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            bindings
+                = <&macro_press &kp LCTRL &kp RIGHT>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp RIGHT &kp LCTRL>;
+        };
+
+        // combo 用（一覧表示）。こちらも同じ理由で explicit modifier にする。
+        // 取りこぼすと素の Tab が入力されてしまうため。押し切りで良いので tap。
+        win_taskview: win_taskview {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LGUI>;
+        };
+        mac_mission: mac_mission {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp UP>
+                , <&macro_release &kp LCTRL>;
+        };
     };
 
     // base 最下段の左下ペア(index 37/38)同時押しでデスクトップ一覧を出す。
@@ -37,13 +104,13 @@
         combo_overview_win {
             timeout-ms = <50>;
             key-positions = <37 38>;
-            bindings = <&kp LG(TAB)>;   // Windows タスクビュー
+            bindings = <&win_taskview>;   // Windows タスクビュー
             layers = <0 4>;
         };
         combo_overview_mac {
             timeout-ms = <50>;
             key-positions = <37 38>;
-            bindings = <&kp LC(UP)>;    // macOS Mission Control
+            bindings = <&mac_mission>;    // macOS Mission Control
             layers = <5>;
         };
     };
@@ -57,7 +124,7 @@
 &kp TAB    &kp Q  &kp W  &kp E     &kp R     &kp T                      &kp Y  &kp U     &kp I      &kp O    &kp P     &kp MINUS
 &kp LCTRL  &kp A  &kp S  &kp D     &kp F     &kp G                      &kp H  &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z  &kp X  &kp C     &kp V     &kp B                      &kp N  &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-&caps_word &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &kp LGUI  &kp LALT  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp BSPC  &kp RGUI  &none  &none  &tog 4
+&caps_word &win_desk_prev    &win_desk_next     &kp LGUI  &kp LALT  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp BSPC  &kp RGUI  &none  &none  &tog 4
             >;
         };
 
@@ -110,7 +177,7 @@
 &trans  &trans        &trans         &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans         &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans         &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(LEFT)  &kp LC(RIGHT)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mac_desk_prev &mac_desk_next  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };

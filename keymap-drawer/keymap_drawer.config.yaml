@@ -15,13 +15,13 @@ parse_config:
     "&to 0": { t: "Win", h: "OS" }
     "&to 5": { t: "Mac", h: "OS" }
     # 仮想デスクトップ切替（base = Windows / mac レイヤー = macOS）
-    "&kp LC(LG(LEFT))": { t: "←", h: "Desk" }
-    "&kp LC(LG(RIGHT))": { t: "→", h: "Desk" }
-    "&kp LC(LEFT)": { t: "←", h: "Desk" }
-    "&kp LC(RIGHT)": { t: "→", h: "Desk" }
+    "&win_desk_prev": { t: "←", h: "Desk" }
+    "&win_desk_next": { t: "→", h: "Desk" }
+    "&mac_desk_prev": { t: "←", h: "Desk" }
+    "&mac_desk_next": { t: "→", h: "Desk" }
     # combo（左下ペア同時押し）
-    "&kp LG(TAB)": "TaskView"
-    "&kp LC(UP)": "Mission"
+    "&win_taskview": "TaskView"
+    "&mac_mission": "Mission"
   # &trans は既定で ▽ + type:trans。色は下の svg_extra_style で調整する。
   trans_legend: { t: "▽", type: "trans" }
 
